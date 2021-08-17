@@ -3,19 +3,23 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './components/views/home/Login';
 import Main from './components/views/home/Main';
 import Nav from './components/views/public/Nav';
-import ReduxApp01 from './practice/ReduxApp01';
+import Signup from './components/views/home/Signup';
+import { Provider } from 'react-redux';
+import store from './redux/store/Store';
 
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter>
-      <ReduxApp01/>
-        <Nav/>
-          <Switch>
-            <Route exact path = "/Login" component = {Login}/>
-            <Route exact path = "/" component = {Main}/>
-          </Switch>
-      </BrowserRouter>
+      <Provider store={ store }>
+        <BrowserRouter>
+          <Nav/>
+            <Switch>
+              <Route exact path = "/Login" component = {Login}/>
+              <Route exact path = "/" component = {Main}/>
+              <Route exact path = "/Sign Up" component = {Signup}/>
+            </Switch>
+        </BrowserRouter>
+      </Provider>
     );
   }
 }
