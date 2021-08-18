@@ -4,8 +4,9 @@ import Login from './components/views/home/Login';
 import Main from './components/views/home/Main';
 import Nav from './components/views/public/Nav';
 import Signup from './components/views/home/Signup';
+
 import { Provider } from 'react-redux';
-import store from './redux/store/Store';
+import store from './redux/Store';
 
 class App extends React.Component {
   render() {
@@ -16,7 +17,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path = "/Login" component = {Login}/>
               <Route exact path = "/" component = {Main}/>
-              <Route exact path = "/Sign Up" component = {Signup}/>
+              <Route exact path = "/SignUp" component = {Signup}/>
             </Switch>
         </BrowserRouter>
       </Provider>

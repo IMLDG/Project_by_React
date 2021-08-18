@@ -10,7 +10,7 @@ function Nav() {
             <Link to = "/Login">
                 <button>로그인</button>
             </Link>
-            <Link to = "/Sign Up">
+            <Link to = "/SignUp">
                 <button>회원가입</button>
             </Link>
         </>

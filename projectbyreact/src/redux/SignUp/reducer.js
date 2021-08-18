@@ -1,4 +1,4 @@
-import { SignUp } from "./types"
+import { SignUp } from "./types";
 
 const initalState = {
     name : "ㅇㅇ",
@@ -10,12 +10,11 @@ const SignUpReducer = (state = initalState , action) => {
         case SignUp : 
             return {
                 ...state,
-                name : state.name,
+                name : state.name+action.payload,
                 password : state.password,
             };
         default :
             return state;
     }
 }
-
 export default SignUpReducer;
